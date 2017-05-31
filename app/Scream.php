@@ -17,6 +17,31 @@ class Scream implements Calculator
      */
     public function calculate($operand1, $operand2)
     {
-        //
+        $operand1 = $this->transform($operand1);
+        $operand2 = $this->transform($operand2);
+
+        return $operand1 . ' ' . $operand2;
+    }
+
+    /**
+     * Transform an integer to a unicode string.
+     *
+     * @access private
+     * @param int $operand
+     * @return string
+     */
+    private function transform($operand)
+    {
+        $operand = (int) $operand;
+
+        if ($operand >= 0 && $operand <= 255) {
+            $operand = decbin($operand);
+            $operand = str_replace('1', '&#x1F383', $operand);
+            $operand = str_replace('0', '&#x1F47E', $operand);
+        } else {
+            $operand = '&#x1F4A9';
+        }
+
+        return $operand;
     }
 }

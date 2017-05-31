@@ -16,6 +16,12 @@ class Ghost implements Calculator
      */
     public function calculate($operand1, $operand2)
     {
-        //
+        $result = ((float) $operand1 * 2) + ((float) $operand2 / 2);
+
+        if ((int) $result == $result) {
+            return (int) $result;
+        }
+
+        return round($result, 1);
     }
 }

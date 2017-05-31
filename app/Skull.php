@@ -15,6 +15,6 @@ class Skull implements Calculator
      */
     public function calculate($operand1, $operand2)
     {
-        //
+        return (string) $operand1 . ' : ' . (string) $operand2;
     }
 }

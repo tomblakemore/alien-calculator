@@ -15,6 +15,6 @@ class Alien implements Calculator
      */
     public function calculate($operand1, $operand2)
     {
-        //
+        return (int) $operand1 * (int) $operand2;
     }
 }
