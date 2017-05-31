@@ -25,6 +25,17 @@ form {
     @extend .lead;
 }
 
-.github-logo {
-    height: 22px;
+.github-link {
+
+    img {
+        display: block;
+        height: 22px;
+        margin: 0 auto;
+        opacity: (0.5);
+    }
+
+    &:hover img {
+        cursor: pointer;
+        opacity: (1);
+    }
 }
