@@ -11,5 +11,11 @@
 |
 */
 
-Route::get('/', 'Controller@show');
-Route::post('/calculate', 'Controller@calculate');
+Route::get('/', function () {
+    return view('calculator');
+});
+
+Route::post('/alien', 'AlienController@calculate');
+Route::post('/ghost', 'GhostController@calculate');
+Route::post('/scream', 'ScreamController@calculate');
+Route::post('/skull', 'SkullController@calculate');
