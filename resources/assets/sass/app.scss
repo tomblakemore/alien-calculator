@@ -23,14 +23,6 @@ body {
     text-align: center;
 }
 
-form {
-    margin-bottom: $line-height-computed;
-}
-
-.errors, .result {
-    @extend .lead;
-}
-
 .github-link {
 
     img {
@@ -43,6 +35,18 @@ form {
     &:hover img {
         cursor: pointer;
         opacity: (1);
+    }
+}
+
+form {
+    margin-bottom: $line-height-computed;
+}
+
+.result {
+    margin: 0 auto;
+
+    @media (min-width: $screen-md-min) {
+        width: $container-sm;
     }
 }
 

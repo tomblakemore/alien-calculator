@@ -63,7 +63,10 @@
                     <button type="submit" class="btn btn-default">Calculate</button>
                 </form>
 
-                <p class="result" v-if="result">Result: <span v-html="result"></span></p>
+                <div class="result" v-if="result">
+                    <h2>Result</h2>
+                    <pre v-html="result"></pre>
+                </div>
             </div>
 
             <footer class="footer">
