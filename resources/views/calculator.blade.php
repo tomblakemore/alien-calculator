@@ -65,6 +65,12 @@
 
                 <p class="result" v-if="result">Result: <span v-html="result"></span></p>
             </div>
+
+            <footer class="footer">
+                <div class="container">
+                    <p>Produced by <a href="https://github.com/tomblakemore">Tom Blakemore</a></p>
+                </div>
+            </footer>
         </div>
 
         <script src="{{ asset('js/app.js') }}"></script>
