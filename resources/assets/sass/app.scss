@@ -16,3 +16,11 @@ body {
     padding: 40px 15px;
     text-align: center;
 }
+
+form {
+    margin-bottom: $line-height-computed;
+}
+
+.errors, .result {
+    @extend .lead;
+}

@@ -786,12 +786,29 @@ window.Vue = __webpack_require__(37);
  */
 
 var app = new Vue({
-  el: '#app',
-  data: {
-    operand1: '',
-    operand2: '',
-    operator: ''
-  }
+    el: '#app',
+    data: {
+        errors: {},
+        operand1: '',
+        operand2: '',
+        operator: '',
+        result: ''
+    },
+    methods: {
+        calculate: function calculate() {
+            var app = this;
+            axios.post('/calculate', {
+                operand1: this.operand1,
+                operand2: this.operand2,
+                operator: this.operator
+            }).then(function (response) {
+                app.errors = {}; // Reset errors
+                app.result = response.data;
+            }).catch(function (error) {
+                app.errors = error.response.data;
+            });
+        }
+    }
 });
 
 /***/ }),

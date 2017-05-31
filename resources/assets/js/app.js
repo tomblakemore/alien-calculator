@@ -18,8 +18,27 @@ window.Vue = require('vue');
 const app = new Vue({
     el: '#app',
     data: {
+        errors: {},
         operand1: '',
         operand2: '',
-        operator: ''
+        operator: '',
+        result: ''
+    },
+    methods: {
+        calculate: function () {
+            const app = this;
+            axios.post('/calculate', {
+                operand1: this.operand1,
+                operand2: this.operand2,
+                operator: this.operator
+            })
+            .then(function (response) {
+                app.errors = {}; // Reset errors
+                app.result = response.data;
+            })
+            .catch(function (error) {
+                app.errors = error.response.data;
+            });
+        }
     }
 });
