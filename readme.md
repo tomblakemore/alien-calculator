@@ -22,19 +22,19 @@ arrive as strings from the front-end.
 Use [Composer](https://getcomposer.org/) to install Laravel and the other 
 dependencies of this project.
 
-Install the application dependencies.
+To install the application and its dependencies:
 
-    composer install
+    composer create-project
 
-Run the application.
+To run the application:
 
     php artisan serve
 
-If you receive a permissions error try opening up the permissions on the 
+To run the tests:
+
+    vendor/bin/phpunit
+
+Note: if you receive a permissions error try opening up the permissions on the 
 `cache` and `storage` directories.
 
     sudo chmod -R 777 bootstrap/cache storage
-
-Run the tests.
-
-    vendor/bin/phpunit
