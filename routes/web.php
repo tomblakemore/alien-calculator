@@ -15,7 +15,9 @@ Route::get('/', function () {
     return view('calculator');
 });
 
-Route::post('/alien', 'AlienController@calculate');
-Route::post('/ghost', 'GhostController@calculate');
-Route::post('/scream', 'ScreamController@calculate');
-Route::post('/skull', 'SkullController@calculate');
+Route::group(['middleware' => 'ajax'], function() {
+    Route::post('/alien', 'AlienController@calculate');
+    Route::post('/ghost', 'GhostController@calculate');
+    Route::post('/scream', 'ScreamController@calculate');
+    Route::post('/skull', 'SkullController@calculate');
+});

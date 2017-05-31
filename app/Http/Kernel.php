@@ -44,6 +44,6 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        //
+        'ajax' => \App\Http\Middleware\AllowAjaxOnly::class,
     ];
 }
