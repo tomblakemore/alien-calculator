@@ -15,6 +15,13 @@
                     <div class="navbar-header">
                         <a class="navbar-brand" href="/">{{ config('app.name') }}</a>
                     </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="https://github.com/tomblakemore/alien-calculator">
+                                <img class="github-logo" src="{{ asset('images/github-logo.png') }}">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
 
