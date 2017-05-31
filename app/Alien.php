@@ -7,11 +7,11 @@ use App\Contracts\Calculator;
 class Alien implements Calculator
 {
     /**
-     * Calculate and return the value for two input operands.
+     * Cast both operands to integers and multiply together.
      *
      * @param mixed $operand1
      * @param mixed $operand2
-     * @return mixed
+     * @return int
      */
     public function calculate($operand1, $operand2)
     {

@@ -800,7 +800,7 @@ var app = new Vue({
                 operand1: this.operand1,
                 operand2: this.operand2
             }).then(function (response) {
-                app.result = response.data;
+                app.result = response.data.toString();
             });
         }
     }

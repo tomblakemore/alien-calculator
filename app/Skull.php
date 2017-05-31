@@ -7,11 +7,11 @@ use App\Contracts\Calculator;
 class Skull implements Calculator
 {
     /**
-     * Calculate and return the value for two input operands.
+     * Cast both operands to string and concatenate with ' : '.
      *
      * @param mixed $operand1
      * @param mixed $operand2
-     * @return mixed
+     * @return string
      */
     public function calculate($operand1, $operand2)
     {

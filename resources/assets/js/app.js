@@ -31,7 +31,7 @@ const app = new Vue({
                 operand2: this.operand2
             })
             .then(function (response) {
-                app.result = response.data;
+                app.result = response.data.toString();
             });
         }
     }

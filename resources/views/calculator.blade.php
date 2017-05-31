@@ -35,7 +35,7 @@
 
                     <div class="form-group">
                         <label class="sr-only" for="value1">First operand</label>
-                        <input type="text" class="form-control" id="operand1" placeholder="First operand" v-model="operand1">
+                        <input type="text" class="form-control" id="operand1" placeholder="First operand" v-model="operand1" autofocus>
                     </div>
 
                     <div class="form-group">
@@ -45,17 +45,17 @@
 
                     <div class="form-group">
                         <select class="form-control" v-model="operator">
-                            <option value="alien">&#128125; Alien</option>
-                            <option value="skull">&#128128; Skull</option>
-                            <option value="ghost">&#128123; Ghost</option>
-                            <option value="scream">&#128561; Scream</option>
+                            <option value="alien">&#x1F47D; Alien</option>
+                            <option value="skull">&#x1F480; Skull</option>
+                            <option value="ghost">&#x1F47B; Ghost</option>
+                            <option value="scream">&#x1F631; Scream</option>
                         </select>
                     </div>
 
                     <button type="submit" class="btn btn-default">Calculate</button>
                 </form>
 
-                <p class="result" v-if="result">@{{ result }}</p>
+                <p class="result" v-if="result">Result: <span v-html="result"></span></p>
             </div>
         </div>
 
