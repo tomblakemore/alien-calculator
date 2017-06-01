@@ -34,7 +34,7 @@ To run the tests:
 
     vendor/bin/phpunit
 
-Note: if you receive a permissions error try opening up the permissions on the 
+If you receive a permissions error try opening up the permissions on the 
 `cache` and `storage` directories.
 
     sudo chmod -R 777 bootstrap/cache storage
